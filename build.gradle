@@ -18,10 +18,9 @@ test {
 application {
     mainClassName = javaMainClass
 }
-=======
+
 group 'edu.rit.iste-422'
 
->>>>>>> 605ed5f552ad47e8d9a94a5391c4d1d8bb063e3a
 
 repositories {
     mavenCentral()
