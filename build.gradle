@@ -10,6 +10,7 @@ ext {
     javaMainClass = 'RunEdgeConvert'
 }
 
+<<<<<<< HEAD
 test {
     testLogging.showStandardStreams = true
 }
@@ -17,9 +18,23 @@ test {
 application {
     mainClassName = javaMainClass
 }
+=======
+group 'edu.rit.iste-422'
+
+>>>>>>> 605ed5f552ad47e8d9a94a5391c4d1d8bb063e3a
 
 repositories {
     mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.13.3'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.13.3'
+}
+
+test {
+    testLogging.showStandardStreams = true
 }
 
 dependencies {
