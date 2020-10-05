@@ -1,19 +1,25 @@
-apply plugin: 'java'
-
-repositories {
-  mavenCentral()
+plugins {
+    id 'java'
+    id 'application'
 }
 
 group 'edu.rit.iste-422'
+version '1.0-SNAPSHOT'
 
-
-task table(type: JavaExec){
-  main = 'RunEdgeConvert'
-  classpath = sourceSets.main.runtimeClasspath
+ext {
+    javaMainClass = 'RunEdgeConvert'
 }
 
 test {
     testLogging.showStandardStreams = true
+}
+
+application {
+    mainClassName = javaMainClass
+}
+
+repositories {
+    mavenCentral()
 }
 
 dependencies {
